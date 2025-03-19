@@ -1,31 +1,32 @@
 
-//Напишите программу, которая проверяет, положительное ли число, и выводит сообщение.
+//Напишите программу, которая считает площадь прямоугольника (длина и ширина — double).
 import java.util.Scanner;
-import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
         IsFor f = new IsFor();
-        f.Positive();
+        f.Square();
     }
 
     static class IsFor {
-        public void Positive() {
-            System.out.println("Введите любое число");
+        public void Square() {
+            System.out.println("Введите длинну");
             Scanner scanner = new Scanner(System.in);
-            int n =scanner.nextInt();
-            if  (n<0)
-             {
-                 System.out.println("Число  отрицательное");
-             }
-            else if(n>0)
-             {
-                 System.out.println("Число  положительное");
-             }
-            else
-             {
-                 System.out.println("Число  равно 0 ");
-             }
+            double length =scanner.nextDouble();
+            System.out.println("Длинна:"+ length);
+
+            System.out.println("Введите ширину");
+            double width = scanner.nextDouble();
+            System.out.println("Ширина:"+ width);
+
+            System.out.println("Площадь равна");
+
+            double square = length * width;
+
+            System.out.println("Площадь: " + square);
+
+
             scanner.close();
         }
     }
