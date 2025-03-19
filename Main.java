@@ -1,29 +1,32 @@
 
-//Считайте сумму чисел от 1 до n, где n вводит пользователь (while)
+//Напишите программу, которая проверяет, положительное ли число, и выводит сообщение.
 import java.util.Scanner;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         IsFor f = new IsFor();
-        f.Vivod();
+        f.Positive();
     }
 
     static class IsFor {
-        public void Vivod() {
-            System.out.println("Введите число n:");
+        public void Positive() {
+            System.out.println("Введите любое число");
             Scanner scanner = new Scanner(System.in);
-            int n = scanner.nextInt();
-
-            int i = 1;
-            int sum = 0;
-
-            while (i <= n) {
-                sum = sum + i;
-                i++;
-            }
-
-            System.out.println("Сумма чисел от 1 до " + n + " равна: " + sum);
+            int n =scanner.nextInt();
+            if  (n<0)
+             {
+                 System.out.println("Число  отрицательное");
+             }
+            else if(n>0)
+             {
+                 System.out.println("Число  положительное");
+             }
+            else
+             {
+                 System.out.println("Число  равно 0 ");
+             }
+            scanner.close();
         }
     }
 }
