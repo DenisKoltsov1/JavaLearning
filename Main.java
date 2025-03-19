@@ -1,33 +1,23 @@
 
-//Напишите программу, которая считает площадь прямоугольника (длина и ширина — double).
-import java.util.Scanner;
+//Создайте массив из 5 чисел и найдите их сумму.
+
 
 
 public class Main {
     public static void main(String[] args) {
         IsFor f = new IsFor();
-        f.Square();
+        f.Massive();
     }
 
     static class IsFor {
-        public void Square() {
-            System.out.println("Введите длинну");
-            Scanner scanner = new Scanner(System.in);
-            double length =scanner.nextDouble();
-            System.out.println("Длинна:"+ length);
-
-            System.out.println("Введите ширину");
-            double width = scanner.nextDouble();
-            System.out.println("Ширина:"+ width);
-
-            System.out.println("Площадь равна");
-
-            double square = length * width;
-
-            System.out.println("Площадь: " + square);
-
-
-            scanner.close();
+        public void Massive() {
+            int [] numbers = new int [] {1,4,5,6,7};
+            int sum = 0;
+            for (int a : numbers)
+                {
+                     sum= sum+a;
+                 }
+            System.out.println("Сумма: " + sum);
         }
     }
 }
