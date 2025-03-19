@@ -1,22 +1,18 @@
 
 
 import java.util.Scanner;
-
+//Напишите программу, которая выводит числа от 0 до 10 (for).
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new  Scanner (System.in);
-        System.out.println("ВВедите 1 число:");
-        int a =scanner.nextInt();
-        System.out.println("ВВедите 2 число:");
-        int b = scanner.nextInt();
+        IsFor f = new IsFor();
+        f.Vivod();
+    }
 
-        int sum=a+b;
-
-        System.out.println("сумма 2 чисел:");
-        System.out.println(sum);
-
-
-
-
+    static class IsFor {
+        public void Vivod() {
+            for (int i = 0; i <= 10; i++) {
+                System.out.println(i);
+            }
         }
     }
+}
