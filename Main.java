@@ -1,40 +1,28 @@
-//Сделайте поля класса Car приватными, добавьте геттеры и сеттеры.
-
+// Создайте класс Animal и подкласс Dog, унаследуйте поле name.
+// Добавьте в Dog метод bark(), который выводит "Гав!".
 public class Main {
     public static void main(String[] args) {
-        Car mazda = new Car();
-        mazda.setColor("Black");  ;
-        mazda.setSpeed(256);
-
-        mazda.drive();
-        System.out.println("Цвет  и  скорость: " + mazda.getColor()+ "  " + mazda.getSpeed());
+        Dog dog1 = new Dog();
+        dog1.setName("Pivi");
+        dog1.bark();
+        System.out.println(dog1.getName());
     }
 
-    static class Car {
-        private String color;
-        private int speed;
+    static class Animal {
+        private String name;
 
-        public void setColor(String color) {
-            this.color = color;
+        public void setName(String name) {
+            this.name = name;
         }
 
-        public void setSpeed(int speed) {
-            this.speed = speed;
+        public String getName() {
+            return name;
         }
-
-        public String getColor() {
-            return color;
+    }
+    
+    public static class Dog extends Animal {
+        public void bark() {
+            System.out.println("Гав!");
         }
-
-        public int getSpeed() {
-            return speed;
-        }
-
-        public void drive()
-        {
-            System.out.println("Машина едет");
-        }
-
-
     }
 }
