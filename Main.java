@@ -1,28 +1,37 @@
-// Создайте класс Animal и подкласс Dog, унаследуйте поле name.
-// Добавьте в Dog метод bark(), который выводит "Гав!".
+//Создайте ArrayList строк и добавьте в него 5 имен, выведите их.
+//Используйте HashMap для хранения пар "имя-возраст" и найдите возраст по имени.
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Dog dog1 = new Dog();
-        dog1.setName("Pivi");
-        dog1.bark();
-        System.out.println(dog1.getName());
-    }
+        ArrayList<String> name= new ArrayList<>();
+        name.add("Denis");
+        name.add("Vasy");
+        name.add("Tanya");
+        name.add("Nusha");
+        name.add("Roman");
 
-    static class Animal {
-        private String name;
+        System.out.println(name);
 
-        public void setName(String name) {
-            this.name = name;
-        }
+        for (String n : name)
+            {
+                System.out.println(n);
+            }
+    Map<String,Integer> map = new HashMap<String,Integer>();
+        map.put("Denis",37);
+        map.put("Vasy",27);
+        map.put("Tanya",32);
+        map.put("Roman",17);
 
-        public String getName() {
-            return name;
-        }
+
+        for (Map.Entry<String, Integer> item : map.entrySet()) {
+            System.out.printf("Key: %s  Value: %d \n", item.getKey(), item.getValue());
+
     }
-    
-    public static class Dog extends Animal {
-        public void bark() {
-            System.out.println("Гав!");
-        }
-    }
+}
 }
